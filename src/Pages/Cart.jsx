@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import AuthContext from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdArrowBack } from 'react-icons/md';
 
 const Cart = () => {
@@ -27,7 +27,7 @@ const Cart = () => {
                     Total products: <span className='font-semibold'>{cart.length}</span>
                 </p>
                 {
-                    cart.length === 0 ? 'Cart Is Empty' :
+                    cart.length === 0 ? <Link to='/products' className='bg-blue-500 px-3 py-3 text-white rounded'>Start Shopping? </Link> :
                         <div className='flex flex-col gap-5'>
                             {cart.map((product, index) => (
                                 <div key={index} className='rounded-lg flex flex-col gap-5 sm:gap-0 sm:flex-row sm:items-center justify-between p-4 shadow hover:shadow-lg transition-shadow duration-300'>
