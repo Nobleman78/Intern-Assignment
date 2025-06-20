@@ -11,6 +11,9 @@ const Cart = () => {
         const product = cart.find(item => item.id === id);
         if (product) {
             const newQuanity = product.quantity + number
+            if (newQuanity < 1) {
+                return; 
+            }
             updateQuanity(id, newQuanity)
         }
 
@@ -35,13 +38,13 @@ const Cart = () => {
                                     <h3 className='text-xl font-semibold mb-2'>{product.name}</h3>
                                     <p className='text-gray-600 mb-2'>Price: ${(product.price * product.quantity).toFixed(2)}</p>
                                     <div className='flex items-center w-full sm:w-0'>
-                                        <button onClick={() => handleQuanity(product.id, -1)}className='px-3 py-1 bg-gray-200 rounded-l w-50 sm:w-0'>
+                                        <button onClick={() => handleQuanity(product.id, -1)} className='px-3 py-1 bg-gray-200 rounded-l w-50 sm:w-0'>
                                             -
                                         </button>
                                         <span className='px-3 py-1 bg-gray-100'>
                                             {product.quantity}
                                         </span>
-                                        <button onClick={() => handleQuanity(product.id, 1)}className='px-3 py-1 bg-gray-200 rounded-r w-50 sm:w-0'>
+                                        <button onClick={() => handleQuanity(product.id, 1)} className='px-3 py-1 bg-gray-200 rounded-r w-50 sm:w-0'>
                                             +
                                         </button>
                                     </div>
