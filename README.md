@@ -1,12 +1,22 @@
-# React + Vite
+# Intern Assignement
+# Description
+Initialy There have only a one text. When user go Products Navbar can see the pagination implemented Products list and there are three buttons, Next, Prev, Goto.. The user can see the product details by clicking see details and inside the Products detailes user can also add product to the cart and navigate the Cart Page. Cart has functionality to add, delete products. 
+# Features
+1. Product List Show
+2. Product Details Show
+3. Add To Cart
+4. Add and Delete Items From The Cart
+5. Pagination based on limit and offset
+6. Calculate Subtotal and Total Price
+# Techonology Used
+1. React.js
+# Styling
+1. Tailwind css
+# Routing
+1. React Router Dom
+# Other Libray 
+1. React icons
+2. Axios
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
